@@ -37,7 +37,7 @@ function Show() {
                 </div>
 
                 <h1 className='w-full text-center m-6'>More {currBook.category} books</h1>
-                <div className='w-full flex flex-wrap items-center justify-evenly gap-6'>
+                <div className='w-full flex flex-wrap items-center justify-evenly gap-6 pb-8'>
                     {books.filter((el) => el.category === currBook.category).map((book) => {
                         return <BookCard key={book.id} book={book} />
                     })}

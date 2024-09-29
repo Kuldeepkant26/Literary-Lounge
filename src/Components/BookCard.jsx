@@ -14,7 +14,13 @@ function BookCard({ book }) {
                     <i className="ri-book-open-line"></i>
                     <p>{book.category}</p>
                 </div>
-                <Link to={`/show/${book.id}`} className='viewbtn'>view</Link>
+                <Link
+                    to={`/show/${book.id}`}
+                    className='viewbtn'
+                    onClick={() => window.scrollBy({ top: -5000, behavior: 'smooth' })}
+                >
+                    view
+                </Link>
             </div>
         </div>
 
