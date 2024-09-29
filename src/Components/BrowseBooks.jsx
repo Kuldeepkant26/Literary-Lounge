@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../Css/BrowseBooks.css'
+import '../Css/Browsebooks.css'
 import { useSelector } from 'react-redux';
 import BookCard from './BookCard';
 import { toast } from 'react-toastify';
