@@ -9,6 +9,9 @@ function BrowseBooks() {
     const [filter, setFilter] = useState('');
     const [fbooks, setfbooks] = useState([]); //filtered books
     function handelSearch() {
+        if (filter === "") {
+            return toast.error("Please enter somthing")
+        }
         setfbooks(books.filter((book) => book.title.toLowerCase().includes(filter.toLowerCase()) || book.author.toLowerCase().includes(filter.toLowerCase()) || book.category.toLowerCase().includes(filter.toLowerCase())))
         setFilter('')
         toast.success("Fetched Data")
